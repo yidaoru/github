@@ -15,6 +15,8 @@ def compoundInterest(interest, years, base, base_growth = 0):
         income_yearly = base_yearly*((1+ interest)**(i+1))
         property += income_yearly
 
+    base_yearly = (base*(1 + base_growth)**(years -1))  #N年后非资产性年固定收入
+    print("base_yearly:{}".format(base_yearly))
     print("property:{}".format(property))
     return property
 
